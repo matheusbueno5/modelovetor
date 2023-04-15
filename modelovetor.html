@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho com Vetores</title>
+</head>
+<body>
+    <h1>Manipulando informações no vetor</h1>
+    <div id = "resultados"></div>
+    <div id = "resultados2"></div>
+    <div id = "resultados3"></div>
+    <div id = "resultados4"></div>
+    <div id = "resultados5"></div>
+    <div id = "resultados6"></div>
+    <div id = "resultados7"></div>
+    <div id = "resultados8"></div>
+    <div id = "resultados9"></div>
+    <script>
+        /* 1° forma de usar o array */
+        const times = new Array("Palmeiras","Corinthians","Santos","SBC");
+        /* 2° forma de usar o array */
+        const times2 = [];
+        times2[0] = "Palmeiras";
+        times2[1] = "Corinthians";
+        times2[2] = "Santos";
+        times2[3] = "SBC";
+        /* 3° forma de usar o array */
+        const times3 =["Palmeiras","Corinthians","Santos","SBC"];
+
+        /* para colocar algo entre os index*/
+        //document.getElementById("resultados").innerHTML = times3.join("</br>")
+        document.getElementById("resultados").innerHTML = times3;
+        times3.pop() //retira o último elemento do vetor
+        document.getElementById("resultados2").innerHTML = times3;
+        times3.pop() 
+        document.getElementById("resultados3").innerHTML = times3;
+        times3.push("Atlético Mineiro"); //adiciona um valor no último vetor
+        document.getElementById("resultados4").innerHTML = times3;
+        times3.shift(); //retira o 1° do vetor
+        document.getElementById("resultados5").innerHTML = times3;
+        times3.unshift("Vasco"); //acrescenta um valor no primeiro index do vetor
+        document.getElementById("resultados6").innerHTML = times3;
+        times3[1] = "Água Santa"; //substitui um valor por outro valor por meio do index (que no caso seria o valor que está no index 1)
+        document.getElementById("resultados7").innerHTML = times3;
+        times3[times3.length] = "Grêmio"; //acrescenta um valor no último vetor mas analisando os index
+        document.getElementById("resultados8").innerHTML = times3;
+        delete times3[2]; // deleta um valor por meio do index (que no caso seria o valor que está no index 2)
+        document.getElementById("resultados9").innerHTML = times3;
+
+    </script>
+</body>
+</html>
